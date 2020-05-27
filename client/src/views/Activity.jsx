@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { navigate } from "@reach/router";
 import Header from "../components/Header";
+import MapContainer from "../components/MapContainer";
 
 const Activity = (props) => {
   const [activity, setActivity] = useState(null);
@@ -35,6 +36,14 @@ const Activity = (props) => {
       </div>
     )
   }
+
+  // const location = {
+  //   name: activity.name,
+  //   location: { 
+  //     lat: activity.lat,
+  //     lng: activity.lon
+  //   },
+  // };
 
   return (
     <div>
@@ -77,6 +86,18 @@ const Activity = (props) => {
           <span className="col-25"><b>Likes:</b></span>
           <span className="col-75">{activity.likeCount}</span>
         </div>
+        <MapContainer 
+          locations={[
+            {
+              name: activity.name,
+              location: {
+                lat: activity.lat,
+                lng: activity.lon
+              }
+            }
+          ]}
+          mapSize="500px"
+        />
       </div>
     </div>
   );
