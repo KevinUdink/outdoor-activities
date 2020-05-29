@@ -7,6 +7,7 @@ import Activity from "./views/Activity";
 import ActivityNew from "./views/ActivityNew";
 import Activities from "./views/Activities";
 import ActivityUpdate from "./views/ActivityUpdate";
+import FileUpload from "./views/FileUpload";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <ActivityNew path="/activities/new" />
         <Activity path="/activities/:id" />
         <ActivityUpdate path="/activities/:id/edit" />
+        <FileUpload path="/upload" />
       </Router>
     </div>
   );

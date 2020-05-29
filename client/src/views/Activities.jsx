@@ -71,7 +71,29 @@ const Activities = () => {
         </select>
       </div>
       <hr />
-      <table className="activities-table">
+          {activities.map((activity) => {
+            return (
+              <div className="card border-primary my-3" key={activity._id}>
+                <div className="card-header text-white bg-primary">
+                  <h5 class="card-title">
+                    {activity.name}
+                  </h5>
+                </div>
+                <div className="card-body">
+                  Category: {activity.category}
+                  Likes: {activity.likeCount}
+                </div>
+                <div className="card-footer text-center">
+                  <Link to={`/activities/${activity._id}`} className="btn btn-success mx-4">Details</Link>
+                  {" "} {" "}
+                  <Link to={`/activities/${activity._id}/edit`} className="btn btn-danger mx-4">Edit</Link>
+                  {" "} {" "}
+                  <button onClick={(event) => {handleLike(activity)}} className="btn btn-info mx-4">Like</button>
+                </div>
+              </div>
+            );
+          })}
+      {/* <table className="activities-table">
         <thead>
           <tr>
             <th className="activities-th">Name</th>
@@ -104,7 +126,7 @@ const Activities = () => {
             );
           })}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 };

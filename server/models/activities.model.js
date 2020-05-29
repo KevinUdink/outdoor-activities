@@ -35,6 +35,9 @@ const ActivitySchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    // image: {
+    //   type: File,
+    // }
   },
   { timestamps: true }
 );

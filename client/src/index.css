@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -40,7 +40,7 @@ code {
   background-color: rebeccapurple;
   color: #fff;
   text-align: center;
-  /* font-size: 3rem; */
+  font-size: 3rem;  kdu
   padding: 0.5rem;
 }
 
@@ -51,7 +51,7 @@ form {
 }
 
 .form-group {
-  /* display: flex; */
+  display: flex;  kdu 
   margin: 0.5rem 0;
 }
 
@@ -67,7 +67,6 @@ input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  /* box-sizing: border-box; */
   resize: vertical;
 }
 
@@ -79,20 +78,20 @@ div>.details {
 }
 
 .col-25 {
-  /* border: 1px green dotted; */
+  border: 1px green dotted;
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
 .col-75 {
-  /* border: 1px red dotted; */
+  border: 1px red dotted;
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -187,4 +186,4 @@ tr:nth-child(odd) {
 #activity-form div {
   display: table-cell;
   height: 300px;
-}
+} */
