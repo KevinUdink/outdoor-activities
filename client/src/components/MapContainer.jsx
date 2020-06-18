@@ -27,7 +27,7 @@ const MapContainer = ({locations, mapSize}) => {
   return (
     <div style={{width: mapSize, height: mapSize, margin: "auto", padding: "15px"}}>
       <LoadScript
-        googleMapsApiKey='AIzaSyDrQyh0u8AlUXPWPNi7psWVll8KuhYwGiM'>
+        googleMapsApiKey='Google_API_Key_goes_here'>
           <GoogleMap
             // place the map on the page
             mapContainerStyle={mapStyles}
