@@ -27,12 +27,20 @@ const ActivityNew = (props) => {
   return (
     <div>
       <Header allActivities={false} />
-      <h3>Can't wait to share your favorite outdoor activities?</h3>
-      <ActivityForm 
-        initialActivity={{name: "", category: "", description: "", lat: "", lon: "", url: ""}} 
-        onSubmitProp={createActivity} 
-        errors={errors} 
-      />
+      <div class="col-md-8 offset-md-2">
+        <div class="card card-outline-secondary">
+          <div class="card-header">
+              <h3 class="mb-0">Can't wait to share your favorite outdoor activities?</h3>
+          </div>
+          <div class="card-body">
+            <ActivityForm 
+              initialActivity={{name: "", category: "", description: "", lat: "", lon: "", url: ""}} 
+              onSubmitProp={createActivity} 
+              errors={errors} 
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

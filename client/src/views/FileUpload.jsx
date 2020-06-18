@@ -58,7 +58,7 @@ const FileUpload = (props) => {
           Upload
         </button>
       </form>
-      <div className="card-set">
+      {/* <div className="card-set">
         <div className="card-deck my-4">
           <div className="card">
             <div className="card-header">Header</div>
@@ -87,7 +87,7 @@ const FileUpload = (props) => {
         <div className="card-footer">
           card footer
         </div>
-      </div>
+      </div> */}
     </div>
   )
 };

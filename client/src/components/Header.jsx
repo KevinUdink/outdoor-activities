@@ -5,27 +5,17 @@ const Header = ({allActivities}) => {
   // console.log("location:", window.location.pathname);
 
   return (
-      <div className="jumbotron">
+      <div className="jumbotron py-3">
         <h1 className="display-4">Corona Friendly Outdoor Activities</h1>
-        <p className="lead">
+        <hr className="my-4" />
+        <p className="lead py-3">
           {
             allActivities === true ?
-              <Link to="/activities/new" className="text-info" style={{marginRight: "10px", marginLeft: "10px"}}><h3>Add your favorite activity</h3></Link>
+              <Link to="/activities/new" className="text-primary" style={{marginRight: "10px", marginLeft: "10px"}}><h3>Add your favorite activity</h3></Link>
                 :
-              <Link to="/activities" className="text-info" style={{marginRight: "10px", marginLeft: "10px"}}><h3>back to home</h3></Link>
+              <Link to="/activities" className="text-primary" style={{marginRight: "10px", marginLeft: "10px"}}><h3>back to home</h3></Link>
           }
         </p>
-        {/* <div style={{display: "inline-block", textAlign: "left", width: "50%"}}>
-          <h1>Corona Friendly Outdoor Activities</h1>
-        </div>
-        <div style={{display: "inline-block", textAlign: "right", width: "20%"}}>
-          {
-            allActivities === true ?
-              <Link to="/activities/new" className="btn" style={{marginRight: "10px", marginLeft: "10px"}}><h3>Add your favorite activity</h3></Link>
-                :
-              <Link to="/activities" className="btn" style={{marginRight: "10px", marginLeft: "10px"}}><h3>back to home</h3></Link>
-          }
-        </div> */}
       </div>
   );
 }

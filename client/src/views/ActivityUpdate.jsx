@@ -41,12 +41,20 @@ const ActivityUpdate = (props) => {
   return (
     <div>
       <Header allActivities={false} />
-      <h3>Edit {activity.name}</h3>
-      <ActivityForm 
-        initialActivity={activity} 
-        onSubmitProp={updateActivity} 
-        errors={errors} 
-      />
+      <div class="col-md-8 offset-md-2">
+        <div class="card card-outline-secondary">
+          <div class="card-header">
+              <h3 class="mb-0">Edit {activity.name}</h3>
+          </div>
+          <div class="card-body">
+            <ActivityForm 
+              initialActivity={activity} 
+              onSubmitProp={updateActivity} 
+              errors={errors} 
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

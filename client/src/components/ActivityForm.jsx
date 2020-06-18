@@ -43,85 +43,70 @@ const ActivityForm = (props) => {
   }
 
   return (
-			// "<form class=\"form-horizontal\">",
-			// "\t<div class=\"form-group\">",
-			// "\t\t<label for=\"userName\" class=\"control-label\">UserName</label>",
-			// "\t\t<input type=\"email\" id=\"userName\" placeholder=\"UserName\">",
-			// "\t</div>",
-			// "\t<div class=\"form-group\">",
-			// "\t\t<label for=\"password\" class=\"control-label\">Password</label>",
-			// "\t\t<input type=\"password\" id=\"inputPassword\" placeholder=\"Password\">",
-			// "\t</div>",
-			// "\t<div class=\"checkbox\">",
-			// "\t\t<label>",
-			// "\t\t\t<input type=\"checkbox\">",
-			// "\t\t\tRemember me",
-			// "\t\t</label>",
-			// "\t</div>",
-			// "\t<button type=\"submit\">Login</button>",
-			// "</form>"
-    <form onSubmit={onSubmitHandler} className="form-horizontal">
-      <div style={{display: "inline-block", width: "50%", padding: "0px 20px"}}>
-        <div className="form-group">
-          {errors.name ? <p><span className="error-message">{errors.name.message}</span></p> : ""}
-          <label htmlFor="name" className="control-label">Name</label>
-          <input type="text" 
-            id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            />
-        </div>
-        <div className="form-group">
-          {errors.category ? <p><span className="error-message">{errors.category.message}</span></p> : ""}
-          <label htmlFor="category" className="control-label">Category</label><br />
-          <select 
-              id="category"
-              value={category} 
-              onChange={(event) => setCategory(event.target.value)
-          }>
-            <option value="Biking">Biking</option>
-            <option value="Camping">Camping</option>
-            <option value="Hiking">Hiking</option>
-            <option value="Shooting">Shooting</option>
-          </select>
-        </div>
-        <div className="form-group">
-          {errors.description ? <p><span className="error-message">{errors.description.message}</span></p> : ""}
-          <label htmlFor="description" className="control-label">Description</label><br />
-          <input type="text" 
-            id="description"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-            />
-        </div>
+    <form onSubmit={onSubmitHandler} autocomplete="off" className="">
+      <div className="form-group">
+        {errors.name ? <p><span className="error-message">{errors.name.message}</span></p> : ""}
+        <label htmlFor="nameInput" className="control-label float-left">Name</label>
+        <input type="text" 
+          className="form-control"
+          id="nameInput"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          />
       </div>
-      <div style={{display: "inline-block", width: "50%", padding: "0px 20px"}}>
-        <div className="form-group">
-          {errors.lat ? <p><span className="error-message">{errors.lat.message}</span></p> : ""}
-          <label htmlFor="name" className="control-label">Latitude</label>
-          <input type="lon" 
-            id="lat"
-            value={lat}
-            onChange={(event) => setLat(event.target.value)}
-            />
-        </div>
-        <div className="form-group">
-          {errors.lon ? <p><span className="error-message">{errors.lon.message}</span></p> : ""}
-          <label htmlFor="lon" className="control-label">Longitude</label>
-          <input type="text" 
-            id="lon"
-            value={lon}
-            onChange={(event) => setLon(event.target.value)}
-            />
-        </div>
-        <div className="form-group">
-          <label htmlFor="url" className="control-label">URL</label>
-          <input type="text" 
-            id="url"
-            value={url}
-            onChange={(event) => setUrl(event.target.value)}
-            />
-        </div>
+      <div className="form-group">
+        {errors.category ? <p><span className="error-message">{errors.category.message}</span></p> : ""}
+        <label htmlFor="categoryInput" className="control-label float-left">Category</label>
+        <select 
+            className="form-control"
+            id="categoryInput"
+            value={category} 
+            onChange={(event) => setCategory(event.target.value)
+        }>
+          <option value="Biking">Biking</option>
+          <option value="Camping">Camping</option>
+          <option value="Hiking">Hiking</option>
+          <option value="Shooting">Shooting</option>
+        </select>
+      </div>
+      <div className="form-group">
+        {errors.description ? <p><span className="error-message">{errors.description.message}</span></p> : ""}
+        <label htmlFor="descriptionInput" className="control-label float-left">Description</label>
+        <input type="text" 
+          className="form-control"
+          id="descriptionInput"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+          />
+      </div>
+      <div className="form-group">
+        {errors.lat ? <p><span className="error-message">{errors.lat.message}</span></p> : ""}
+        <label htmlFor="latInput" className="control-label float-left">Latitude</label>
+        <input type="text" 
+          className="form-control"
+          id="latInput"
+          value={lat}
+          onChange={(event) => setLat(event.target.value)}
+          />
+      </div>
+      <div className="form-group">
+        {errors.lon ? <p><span className="error-message">{errors.lon.message}</span></p> : ""}
+        <label htmlFor="lonInput" className="control-label float-left">Longitude</label>
+        <input type="text" 
+          className="form-control"
+          id="lonInput"
+          value={lon}
+          onChange={(event) => setLon(event.target.value)}
+          />
+      </div>
+      <div className="form-group">
+        <label htmlFor="urlInput" className="control-label float-left">URL</label>
+        <input type="text" 
+          className="form-control"
+          id="urlInput"
+          value={url}
+          onChange={(event) => setUrl(event.target.value)}
+          />
       </div>
       <div className="form-group">
         <button className="btn btn-success margin-auto">{initialActivity.name === "" ? "Add Activity" : "Update Activity"}</button>

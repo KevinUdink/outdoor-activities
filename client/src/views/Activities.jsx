@@ -57,7 +57,7 @@ const Activities = () => {
       <Header allActivities={true} />
       <h3>These activities are calling your name!  Get OUTSIDE!!</h3>
       <div>
-        Filter by category:
+        <span className="mx-3">Filter by category:</span>
         <select
           onChange={(event) => {
             filterActivities(event);
@@ -74,13 +74,16 @@ const Activities = () => {
           {activities.map((activity) => {
             return (
               <div className="card border-primary my-3" key={activity._id}>
-                <div className="card-header text-white bg-primary">
+                <div className="card-header text-white bg-info">
                   <h5 class="card-title">
                     {activity.name}
                   </h5>
                 </div>
                 <div className="card-body">
-                  Category: {activity.category}
+                  <div>
+                    <img src="placeholder-img-4.jpg" alt="actimage" style={{width: "300px"}} />
+                  </div>
+                  Category: {activity.category}<br />
                   Likes: {activity.likeCount}
                 </div>
                 <div className="card-footer text-center">
@@ -88,7 +91,7 @@ const Activities = () => {
                   {" "} {" "}
                   <Link to={`/activities/${activity._id}/edit`} className="btn btn-danger mx-4">Edit</Link>
                   {" "} {" "}
-                  <button onClick={(event) => {handleLike(activity)}} className="btn btn-info mx-4">Like</button>
+                  <button onClick={(event) => {handleLike(activity)}} className="btn btn-primary mx-4">Like</button>
                 </div>
               </div>
             );
